@@ -25,7 +25,7 @@ define("CLOSING_CONNECTION","Closing mailbox connection");
 
 // configurable parameters
 define("EMAIL_INTERVAL","-10 days");
-define("SEARCH_EMAIL_FROM","alok.gupta@neuronsoftsols.com");
+define("SEARCH_EMAIL_FROM","emailfromid@gmail.com.com");
 
 
 
