@@ -3,18 +3,24 @@
 * Class used to connect IMAP/POP3 account and fetch emails header on basis 
 * of search date filter and sender email address.
 *
-* @package    imap
+* @package    imap-pop3
 * @subpackage imapbox
-* @author     Vikram Thakur
+* @author     Vikram Thakur <vikramjeet.thakur@gmail.com>
 * @version    0.1-BETA
 * 
-* usage:
+* Usage:
 *  To connect to a POP3 server on port 110 on the local server, use:
 *  $mbox = new imapbox("{localhost:110/pop3}INBOX", "user", "pass" ,DEBUG); DEBUG = false[default] / true
 * 
 *  Class calling usage example for IMAP using SSl eg: for google
 *  $mbox = new imapbox("host","user","pass", DEBUG);  DEBUG = false[default] / true  
-* 
+*
+*  eg:
+*  $mbox = new imapbox("{imap.googlemail.com:993/imap/ssl}INBOX","username@gmail.com","password",TRUE);
+*  $val = $mbox->getHeaderInfo();
+*  echo "<pre>";
+*  print_r($val);
+*  echo "</pre>";
 * 
 */
 
@@ -113,16 +119,9 @@ class imapbox{
 
 
 // class usage example
+/**
 
 
-$mbox = new imapbox("{imap.googlemail.com:993/imap/ssl}INBOX", 
-                    "username@gmail.com", 
-                    "password",TRUE
-                    );
-$val = $mbox->getHeaderInfo();
-
-echo "<pre>";
-print_r($val);
-echo "</pre>";
+**/
 
 ?>
