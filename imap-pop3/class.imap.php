@@ -6,11 +6,19 @@
 * @package    imap-pop3
 * @subpackage imapbox
 * @author     Vikram Thakur <vikramjeet.thakur@gmail.com>
-* @version    0.1-BETA
+* @version    0.2-BETA
 * 
 * Usage:
 *  To connect to a POP3 server on port 110 on the local server, use:
 *  $mbox = new imapbox("{localhost:110/pop3}INBOX", "user", "pass" ,DEBUG); DEBUG = false[default] / true
+* 
+*  To connect to an SSL IMAP or POP3 server
+*  $mbox = imap_open ("{localhost:993/imap/ssl}INBOX", "user", "password") 
+* 
+*  To connect to an SSL IMAP or POP3 server with a self-signed certificate,add /ssl/novalidate-cert after the protocol specification:
+*  $mbox = imap_open ("{localhost:995/pop3/ssl/novalidate-cert}", "user", "password")
+*  $mbox = imap_open ("{localhost:993/imap/ssl/novalidate-cert}INBOX", "user", "password")
+* 
 * 
 *  Class calling usage example for IMAP using SSl eg: for google
 *  $mbox = new imapbox("host","user","pass", DEBUG);  DEBUG = false[default] / true  
@@ -23,6 +31,7 @@
 *  echo "</pre>";
 * 
 */
+
 
 
 define("INBOX_EMPTY", "No emails in mailbox");
