@@ -5,7 +5,7 @@
 *
 * @package    imap-pop3
 * @subpackage imapbox
-* @author     Vikram Thakur <vikramjeet.thakur@gmail.com>
+* @author     Vikram Thakur <vikramjeet.thakur@outlook.com>
 * @version    0.2-BETA
 * 
 * Usage:
